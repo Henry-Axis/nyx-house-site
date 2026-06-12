@@ -1,2 +1,5 @@
 # nyx-house-site
-Official website for NYX HOUSE, the AI-native IP studio powered by AXISLABS.
+
+Official website for **NYX HOUSE** — Independent Publishing House.
+
+Published via GitHub Pages at [nyx-house.com](https://nyx-house.com).
