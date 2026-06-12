@@ -1,15 +1,7 @@
 /**
- * NYX HOUSE — Premium Cinematic Cover
- * Single fullscreen landing. Artwork is the only visual asset.
+ * NYX HOUSE — Artwork-only landing
+ * The approved image contains all typography and branding.
  */
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap');
-
-:root {
-    --gold: #C5A059;
-    --gold-light: #D9BD8A;
-    --ivory: #F2EDE4;
-}
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -18,161 +10,24 @@
 }
 
 html, body {
-    height: 100%;
-    overflow: hidden;
-}
-
-body {
-    background: #080808;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-/* ── Fullscreen artwork ───────────────────────────────────────── */
-
-.cover {
-    position: relative;
     width: 100vw;
     height: 100vh;
     height: 100dvh;
     overflow: hidden;
 }
 
-.cover__bg {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    background: #080808 url('../assets/nyx-house-cover.png?v=final-approved') center center / cover no-repeat;
+body {
+    background-color: #050403;
 }
 
-/* Subtle readability scrim — mutes baked-in artwork text, keeps books visible */
-.cover__scrim {
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    background:
-        radial-gradient(ellipse 36% 58% at 50% 43%, rgba(0, 0, 0, 0.52) 0%, rgba(0, 0, 0, 0.18) 55%, transparent 78%),
-        linear-gradient(180deg, rgba(0, 0, 0, 0.10) 0%, transparent 28%, transparent 80%, rgba(0, 0, 0, 0.14) 100%);
-}
-
-/* ── Centered content ─────────────────────────────────────────── */
-
-.cover__content {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    padding: clamp(1.5rem, 5vw, 3rem);
-    color: var(--gold-light);
-}
-
-.cover__wordmark {
-    font-family: 'Cinzel', serif;
-    font-weight: 400;
-    font-size: clamp(1.6rem, 4.8vw, 2.75rem);
-    letter-spacing: 0.38em;
-    text-indent: 0.38em;
-    text-transform: uppercase;
-    color: var(--gold-light);
-    line-height: 1.15;
-    margin-bottom: clamp(0.45rem, 1.2vh, 0.7rem);
-    text-shadow: 0 1px 18px rgba(0, 0, 0, 0.55);
-}
-
-.cover__descriptor {
-    font-family: 'Cinzel', serif;
-    font-weight: 400;
-    font-size: clamp(0.52rem, 1.2vw, 0.65rem);
-    letter-spacing: 0.34em;
-    text-indent: 0.34em;
-    text-transform: uppercase;
-    color: var(--gold);
-    opacity: 0.9;
-    margin-bottom: clamp(1.6rem, 4vh, 2.4rem);
-    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
-}
-
-.cover__headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-style: italic;
-    font-size: clamp(1.2rem, 2.8vw, 1.75rem);
-    letter-spacing: 0.03em;
-    color: var(--ivory);
-    line-height: 1.35;
-    margin-bottom: clamp(1.2rem, 3vh, 1.8rem);
-    text-shadow: 0 1px 16px rgba(0, 0, 0, 0.55);
-}
-
-.cover__body {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 300;
-    font-size: clamp(0.9rem, 1.9vw, 1.1rem);
-    line-height: 1.6;
-    letter-spacing: 0.02em;
-    color: var(--gold-light);
-    opacity: 0.92;
-    margin-bottom: clamp(1.6rem, 3.5vh, 2.2rem);
-    text-shadow: 0 1px 14px rgba(0, 0, 0, 0.5);
-}
-
-.cover__status {
-    font-family: 'Cinzel', serif;
-    font-weight: 400;
-    font-size: clamp(0.58rem, 1.3vw, 0.7rem);
-    letter-spacing: 0.48em;
-    text-indent: 0.48em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: clamp(1.4rem, 3vh, 2rem);
-    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
-}
-
-.cover__url {
-    font-family: 'Cinzel', serif;
-    font-weight: 400;
-    font-size: clamp(0.5rem, 1.1vw, 0.62rem);
-    letter-spacing: 0.28em;
-    text-indent: 0.28em;
-    text-transform: lowercase;
-    color: var(--gold);
-    opacity: 0.85;
-    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
-}
-
-/* ── Responsive ───────────────────────────────────────────────── */
-
-@media (max-width: 480px) {
-    .cover__wordmark {
-        letter-spacing: 0.28em;
-        text-indent: 0.28em;
-    }
-
-    .cover__descriptor {
-        letter-spacing: 0.24em;
-        text-indent: 0.24em;
-    }
-
-    .cover__status {
-        letter-spacing: 0.36em;
-        text-indent: 0.36em;
-    }
-
-    .cover__scrim {
-        background:
-            radial-gradient(ellipse 55% 55% at 50% 44%, rgba(0, 0, 0, 0.32) 0%, transparent 75%),
-            linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, transparent 35%, transparent 80%, rgba(0, 0, 0, 0.22) 100%);
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .cover__bg {
-        position: absolute;
-    }
+.cover {
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    background-color: #050403;
+    background-image: url("../assets/nyx-house-cover.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
