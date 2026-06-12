@@ -42,7 +42,7 @@ body {
     position: fixed;
     inset: 0;
     z-index: 0;
-    background: #080808 url('../assets/nyx-house-cover.png') center center / cover no-repeat;
+    background: #080808 url('../assets/nyx-house-cover.png?v=final-approved') center center / cover no-repeat;
 }
 
 /* Subtle readability scrim — mutes baked-in artwork text, keeps books visible */
