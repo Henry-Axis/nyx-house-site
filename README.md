@@ -9,6 +9,7 @@ Single-screen cinematic coming soon page published via GitHub Pages at [nyx-hous
 ```
 index.html
 CNAME
-assets/nyx-house-cover.png
+assets/nyx-house-cover-desktop.png
+assets/nyx-house-cover-mobile.png
 css/cover.css
 ```
